@@ -1,0 +1,30 @@
+.layout, .template, .layout .box, .layout .main, .template .box {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout .box, .layout .main, .template .box {
+  display: flex;
+}
+
+.header, .footer, .template .box:nth-child(4) {
+  height: 70px;
+}
+
+@media screen and (min-width: 768px){
+  .layout .main {
+    flex-direction: row;
+  }
+  .layout .main .aside, .template .box:nth-child(3) {
+    flex: 0 0 100px;
+    width: 100px;
+  }
+  .layout .main .article, .template .box:nth-child(2) {
+    /* width: calc(100% -100px); */
+    flex: 1
+  }
+  .template .box:nth-child(4) {
+    height: auto;
+    width: 100px;
+  }
+}
