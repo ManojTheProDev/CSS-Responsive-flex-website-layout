@@ -7,7 +7,7 @@
     "build": "webpack --config=webpack.config.js",
     "pretest": "npm install && npm run build",
     "start": "node app.js",
-    "start:test": "PORT=4567 node app.js",
+    "start:test": "set PORT=4567 node app.js",
     "jest": "jest --ci --testResultsProcessor=jest-junit",
     "test": "concurrently -n server,jest --kill-others --success first npm:start:test \"npm run jest --silent || true\" --silent"
   },
@@ -15,7 +15,6 @@
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
     "babel-jest": "^29.5.0",
-    "chromedriver": "^112.0.1",
     "concurrently": "^8.0.1",
     "css-loader": "^6.7.3",
     "jest": "^29.5.0",
