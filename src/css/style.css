@@ -11,6 +11,10 @@
   height: 70px;
 }
 
+.template {
+  height: 400px;
+}
+
 @media screen and (min-width: 768px){
   .layout .main {
     flex-direction: row;
